@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking.PlayerConnection;
 using System.Text;
-using Utils;
+using UnityEngine.XR.iOS.Utils;
 
 namespace UnityEngine.XR.iOS
 {
@@ -50,7 +50,6 @@ namespace UnityEngine.XR.iOS
 		void InitializeARKit(serializableARKitInit sai)
 		{
 			#if !UNITY_EDITOR
-
 			//get the config and runoption from editor and use them to initialize arkit on device
 			Application.targetFrameRate = 60;
 			m_session = UnityARSessionNativeInterface.GetARSessionNativeInterface();
@@ -62,14 +61,12 @@ namespace UnityEngine.XR.iOS
 			UnityARSessionNativeInterface.ARAnchorAddedEvent += ARAnchorAdded;
 			UnityARSessionNativeInterface.ARAnchorUpdatedEvent += ARAnchorUpdated;
 			UnityARSessionNativeInterface.ARAnchorRemovedEvent += ARAnchorRemoved;
-
 			#endif
 		}
 
 		void InitializeARKitFaceTracking(serializableARKitInit sai)
 		{
 			#if !UNITY_EDITOR
-
 			//get the config and runoption from editor and use them to initialize arkit for facetracking on device
 			Application.targetFrameRate = 60;
 			m_session = UnityARSessionNativeInterface.GetARSessionNativeInterface();
@@ -81,33 +78,39 @@ namespace UnityEngine.XR.iOS
 			UnityARSessionNativeInterface.ARFaceAnchorAddedEvent += ARFaceAnchorAdded;
 			UnityARSessionNativeInterface.ARFaceAnchorUpdatedEvent += ARFaceAnchorUpdated;
 			UnityARSessionNativeInterface.ARFaceAnchorRemovedEvent += ARFaceAnchorRemoved;
-
 			#endif
 		}
 
 		public void ARFrameUpdated(UnityARCamera camera)
 		{
+			#if !UNITY_EDITOR
 			serializableUnityARCamera serARCamera = camera;
 			SendToEditor(ConnectionMessageIds.updateCameraFrameMsgId, serARCamera);
-
+			#endif
 		}
 
 		public void ARAnchorAdded(ARPlaneAnchor planeAnchor)
 		{
+			#if !UNITY_EDITOR
 			serializableUnityARPlaneAnchor serPlaneAnchor = planeAnchor;
 			SendToEditor (ConnectionMessageIds.addPlaneAnchorMsgeId, serPlaneAnchor);
+			#endif
 		}
 
 		public void ARAnchorUpdated(ARPlaneAnchor planeAnchor)
 		{
+			#if !UNITY_EDITOR
 			serializableUnityARPlaneAnchor serPlaneAnchor = planeAnchor;
 			SendToEditor (ConnectionMessageIds.updatePlaneAnchorMsgeId, serPlaneAnchor);
+			#endif
 		}
 
 		public void ARAnchorRemoved(ARPlaneAnchor planeAnchor)
 		{
+			#if !UNITY_EDITOR
 			serializableUnityARPlaneAnchor serPlaneAnchor = planeAnchor;
 			SendToEditor (ConnectionMessageIds.removePlaneAnchorMsgeId, serPlaneAnchor);
+			#endif
 		}
 
 		public void ARFaceAnchorAdded(ARFaceAnchor faceAnchor)

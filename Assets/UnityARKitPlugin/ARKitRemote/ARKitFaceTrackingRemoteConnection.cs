@@ -1,8 +1,7 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Networking.PlayerConnection;
 using System.Text;
-using Utils; 
+using UnityEngine.XR.iOS.Utils; 
 
 #if UNITY_EDITOR
 
@@ -157,7 +156,7 @@ namespace UnityEngine.XR.iOS
 		{
 			if (!bTexturesInitialized)
 				return;
-			remoteScreenYTex.LoadRawTextureData(mea.data);
+			remoteScreenYTex.LoadRawTextureData(CompressionHelper.ByteArrayDecompress(mea.data));
 			remoteScreenYTex.Apply ();
 			UnityARVideo arVideo = Camera.main.GetComponent<UnityARVideo>();
 			if (arVideo) {
@@ -170,7 +169,7 @@ namespace UnityEngine.XR.iOS
 		{
 			if (!bTexturesInitialized)
 				return;
-			remoteScreenUVTex.LoadRawTextureData(mea.data);
+			remoteScreenUVTex.LoadRawTextureData(CompressionHelper.ByteArrayDecompress(mea.data));
 			remoteScreenUVTex.Apply ();
 			UnityARVideo arVideo = Camera.main.GetComponent<UnityARVideo>();
 			if (arVideo) {
@@ -187,7 +186,7 @@ namespace UnityEngine.XR.iOS
 
 			serializableFromEditorMessage sfem = new serializableFromEditorMessage ();
 			sfem.subMessageId = SubMessageIds.editorInitARKitFaceTracking;
-			serializableARSessionConfiguration ssc = new serializableARSessionConfiguration (UnityARAlignment.UnityARAlignmentCamera, UnityARPlaneDetection.None, false, enableLightEstimation); 
+			serializableARSessionConfiguration ssc = new serializableARSessionConfiguration (UnityARAlignment.UnityARAlignmentCamera, UnityARPlaneDetection.None, false, enableLightEstimation, true); 
 			UnityARSessionRunOption roTracking = resetTracking ? UnityARSessionRunOption.ARSessionRunOptionResetTracking : 0;
 			UnityARSessionRunOption roAnchors = removeExistingAnchors ? UnityARSessionRunOption.ARSessionRunOptionRemoveExistingAnchors : 0;
 			sfem.arkitConfigMsg = new serializableARKitInit (ssc, roTracking | roAnchors);
