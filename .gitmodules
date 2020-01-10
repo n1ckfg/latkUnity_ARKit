@@ -4,3 +4,6 @@
 [submodule "Assets/latkxARKit"]
 	path = Assets/latkxARKit
 	url = https://github.com/n1ckfg/latkxARKit
+[submodule "Assets/latkxGDrive"]
+	path = Assets/latkxGDrive
+	url = https://github.com/n1ckfg/latkxGDrive
