@@ -164,7 +164,7 @@ PlayerSettings:
     iOS: com.foxgieg.latk
     tvOS: com.Company.ProductName
   buildNumber:
-    iOS: 11
+    iOS: 13
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
