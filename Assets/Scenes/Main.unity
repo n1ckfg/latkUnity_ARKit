@@ -478,19 +478,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 152867932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e6e29feb96e10d40b46d5bbb02ecb8e, type: 3}
+  m_Script: {fileID: 11500000, guid: fadb6079bd7bf6142a7794994c0e8b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickMode: 0
-  zPos: 1
+  pickMode: 1
   showHideGeneric: {fileID: 1535673156}
-  pointer: {fileID: 584095465}
   minBound: {fileID: 21828509}
   fixX: 0
   fixY: 0
   fixZ: 0
   thumb: {fileID: 1007238558}
-  dragging: 0
 --- !u!114 &152867935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,6 +1247,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 603480918}
   - {fileID: 1422389234}
   - {fileID: 1906722125}
   m_Father: {fileID: 884346497}
@@ -1278,13 +1276,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603480917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1535673159}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 584095465}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &613567477
 GameObject:
@@ -1397,7 +1395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671264639
 GameObject:
@@ -1608,7 +1606,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &813553513
 GameObject:
@@ -1849,7 +1847,7 @@ Transform:
   m_Children:
   - {fileID: 584095465}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887604167
 GameObject:
@@ -2102,19 +2100,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 923771815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e6e29feb96e10d40b46d5bbb02ecb8e, type: 3}
+  m_Script: {fileID: 11500000, guid: fadb6079bd7bf6142a7794994c0e8b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickMode: 0
-  zPos: 1
+  pickMode: 1
   showHideGeneric: {fileID: 1535673156}
-  pointer: {fileID: 584095465}
   minBound: {fileID: 1335563535}
   fixX: 0
   fixY: 0
   fixZ: 0
   thumb: {fileID: 2107345816}
-  dragging: 0
 --- !u!114 &923771818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2920,7 +2915,6 @@ MonoBehaviour:
   lightningArtist: {fileID: 1348886579}
   drawMode: 0
   zPos: 1
-  dragMgr: {fileID: 1535673157}
   touchActive: 0
   touchDown: 0
   touchUp: 0
@@ -2950,6 +2944,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 584095465}
     m_Modifications:
+    - target: {fileID: 1811471822144674, guid: b120cbace0a83544e99baddd1bb58368, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4291749270801798, guid: b120cbace0a83544e99baddd1bb58368, type: 3}
       propertyPath: m_LocalScale.z
       value: 4
@@ -2984,7 +2982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4758083446028642, guid: b120cbace0a83544e99baddd1bb58368, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4758083446028642, guid: b120cbace0a83544e99baddd1bb58368, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3010,12 +3008,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b120cbace0a83544e99baddd1bb58368, type: 3}
---- !u!1 &1422389233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1811471822144674, guid: b120cbace0a83544e99baddd1bb58368,
-    type: 3}
-  m_PrefabInstance: {fileID: 1422389232}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1422389234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4758083446028642, guid: b120cbace0a83544e99baddd1bb58368,
@@ -3174,7 +3166,6 @@ GameObject:
   - component: {fileID: 1535673159}
   - component: {fileID: 1535673158}
   - component: {fileID: 1535673156}
-  - component: {fileID: 1535673157}
   m_Layer: 0
   m_Name: ColorPickerHydra
   m_TagString: Untagged
@@ -3191,35 +3182,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535673155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea2c35180610d84a9b89ddc920dcef9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f5ceaf1b695c408d9e58fe2554f4315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 603480918}
-  pointer: {fileID: 584095465}
+  pointer: {fileID: 0}
   target:
-  - {fileID: 1422389233}
+  - {fileID: 923771815}
   - {fileID: 152867932}
   - {fileID: 548135725}
-  - {fileID: 923771815}
   isTracking: 0
---- !u!114 &1535673157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535673155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad4639fb36b74e988ea63846a4090cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggers:
-  - {fileID: 152867934}
-  - {fileID: 923771817}
-  pickMode: 0
-  zPos: 1
-  blocked: 0
 --- !u!114 &1535673158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3230,10 +3202,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535673155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3a4c20663a14299b4d511d1dee41ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 9aef1e5325e6c440c8551d6bd98262a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningArtist: {fileID: 1348886579}
+  latk: {fileID: 1348886579}
   minBrightness: 0.65
 --- !u!4 &1535673159
 Transform:
@@ -3484,7 +3456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 584095465}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1906722126
 TextMesh:

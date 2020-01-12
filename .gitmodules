@@ -7,3 +7,6 @@
 [submodule "Assets/latkxGDrive"]
 	path = Assets/latkxGDrive
 	url = https://github.com/n1ckfg/latkxGDrive
+[submodule "Assets/latkxColorPicker"]
+	path = Assets/latkxColorPicker
+	url = https://github.com/n1ckfg/latkxColorPicker
