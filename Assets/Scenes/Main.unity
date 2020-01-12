@@ -1277,7 +1277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603480917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.33}
+  m_LocalPosition: {x: 0.1, y: 0, z: 2.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1535673159}
@@ -2913,6 +2913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightningArtist: {fileID: 1348886579}
+  colorPalette: {fileID: 1535673156}
   drawMode: 0
   zPos: 1
   touchActive: 0
@@ -3182,7 +3183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535673155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5ceaf1b695c408d9e58fe2554f4315, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ea2c35180610d84a9b89ddc920dcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 603480918}
@@ -3202,7 +3203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535673155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aef1e5325e6c440c8551d6bd98262a5, type: 3}
+  m_Script: {fileID: 11500000, guid: af3a4c20663a14299b4d511d1dee41ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   latk: {fileID: 1348886579}
@@ -3215,7 +3216,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535673155}
-  m_LocalRotation: {x: 0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
@@ -3224,7 +3225,7 @@ Transform:
   - {fileID: 923771816}
   m_Father: {fileID: 603480918}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1628259390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400018, guid: 24791da1fd0e64f8b94d70cee5e53e74,
