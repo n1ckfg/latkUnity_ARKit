@@ -13,10 +13,11 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd $DIR
 
-mkdir Build
-cd Build
-pod init
-pod install --repo-update
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm install ruby@latest
+source ~/.bash_profile
+rvm use ruby-3.0.0 --default
+rvm ruby-3.0.0 do rvm gemset create latest
+gem install cocoapods
 
-#echo "Add the following to your Podfile:"
-#echo "pod 'AppAuth'"
