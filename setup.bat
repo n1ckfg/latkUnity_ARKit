@@ -7,7 +7,7 @@ git submodule foreach git checkout master
 git submodule foreach git reset --hard
 git submodule foreach git pull origin master
 
-cd Assets\latkxGDrive
-git checkout unity-2018-lts
+rem cd Assets\latkxGDrive
+rem git checkout unity-2018-lts
 
 @pause
